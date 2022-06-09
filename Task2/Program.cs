@@ -7,8 +7,9 @@
 Random rand = new Random();
 int inum = rand.Next(10,100);
 Console.Write($"Случайное число {inum}");
-int a = inum100;
-int b = int.Parse(Convert.ToString(rand)[1].ToString());
+int a = inum%100;
+int b = inum%10;
+Console.Write($"Случайное число {a}{b}");
 if (a > b)
 {
     Console.Write($"Наибольшее число {a}");
