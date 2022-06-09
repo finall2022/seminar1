@@ -4,17 +4,18 @@
 78 -> 8
 12-> 2
 85 -> 8 */
-Random rand = new Random();
-int inum = rand.Next(10,100);
-Console.Write($"Случайное число {inum}");
-int a = inum%100;
-int b = inum%10;
-Console.Write($"Случайное число {a}{b}");
-if (a > b)
+int number = new Random().Next(10, 100);
+Console.WriteLine($"Случайное число из отрезка {number}");
+int x = number % 10;
+int y = number / 10;
+if (x > y)
 {
-    Console.Write($"Наибольшее число {a}");
+    Console.WriteLine($"Большая вторая цифра {x}");
 }
-else
-{
-    Console.Write($"Наибольшее число {b}");
-} 
+else if (y < x)
+    {
+    Console.WriteLine($"Большая первая цифра {y}");
+    }
+    else{
+        Console.Write($"Оба числа равны {x}");
+    }
